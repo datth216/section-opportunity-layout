@@ -1,0 +1,26 @@
+@mixin rotateBorderCircle {
+  animation: rotateBorder 10s linear infinite;
+  @keyframes rotateBorder {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
+
+@mixin borderCircle($width, $height) {
+  content: "";
+  position: absolute;
+  width: $width;
+  height: $height;
+  opacity: 0.15;
+  border: 2px dashed #004eab;
+  border-radius: 100rem;
+}
+
+@mixin size($width, $height) {
+  width: $width;
+  height: $height;
+}

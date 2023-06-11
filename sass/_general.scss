@@ -1,0 +1,39 @@
+body {
+  background-color: #f5f5f5;
+  color: $neutral-dark;
+  font-family: $primary-font;
+  font-size: 16px;
+  line-height: 1;
+}
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1440px;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1151px;
+}
+
+.circle {
+  color: $neutral-white;
+  background: linear-gradient(63.23deg, #204ea5 -29.6%, #eb4969 101.75%);
+  box-shadow: 3px 10px 25px rgba(43, 13, 19, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: calc(56 / 48);
+  letter-spacing: -2px;
+  border-radius: 100rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .circle {
+    font-size: 30px;
+    line-height: calc(56 / 30);
+  }
+}

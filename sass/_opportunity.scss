@@ -1,0 +1,333 @@
+.content {
+  display: flex;
+  padding-top: 98px;
+
+  .content-left {
+    &__title {
+      max-width: 474px;
+      font-size: 48px;
+      line-height: calc(56 / 48);
+      letter-spacing: -2px;
+      font-weight: 700;
+      margin-bottom: 54px;
+    }
+
+    &__circle {
+      position: relative;
+      height: 669px;
+    }
+
+    .circle-left:first-child {
+      @include size(222px, 222px);
+      position: absolute;
+      top: 107px;
+      left: 20px;
+      &::after {
+        @include borderCircle(246px, 246px);
+        @include rotateBorderCircle;
+      }
+    }
+    .circle-left:nth-child(2) {
+      @include size(218px, 218px);
+      position: absolute;
+      bottom: 88px;
+      left: 210px;
+      &::after {
+        @include borderCircle(246px, 246px);
+        @include rotateBorderCircle;
+      }
+    }
+    .circle-left:last-child {
+      @include size(280px, 280px);
+      position: absolute;
+      top: 0;
+      left: 323px;
+      &::after {
+        @include borderCircle(306px, 306px);
+        @include rotateBorderCircle;
+      }
+    }
+  }
+
+  .content-right {
+    margin-left: auto;
+
+    &__circle {
+      position: relative;
+      height: 312px;
+    }
+
+    .circle-right:first-child {
+      @include size(258px, 258px);
+      position: absolute;
+      right: 270px;
+      bottom: 84px;
+
+      &::after {
+        @include borderCircle(284px, 284px);
+        @include rotateBorderCircle;
+      }
+    }
+
+    .circle-right:last-child {
+      @include size(222px, 222px);
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      &::after {
+        @include borderCircle(246px, 246px);
+        @include rotateBorderCircle;
+      }
+    }
+
+    &__desc {
+      color: $primary-blue;
+      font-size: 24px;
+      font-weight: 700;
+      line-height: calc(34 / 24);
+      letter-spacing: -0.8px;
+      max-width: 414px;
+      margin-bottom: 24px;
+      margin-top: 40px;
+    }
+
+    &__text {
+      font-weight: 400;
+      line-height: calc(26 / 16);
+      letter-spacing: -0.2px;
+      max-width: 414px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+li {
+  color: $primary-pink;
+}
+
+li > p {
+  color: $neutral-dark;
+}
+
+@media screen and (max-width: 1200px) {
+  .content {
+    .content-left {
+      .circle-left:first-child {
+        @include size(185px, 185px);
+        &::after {
+          @include borderCircle(209px, 209px);
+        }
+      }
+
+      .circle-left:nth-child(2) {
+        @include size(182px, 182px);
+        &::after {
+          @include borderCircle(210px, 210px);
+        }
+      }
+
+      .circle-left:last-child {
+        @include size(233px, 233px);
+        &::after {
+          @include borderCircle(259px, 259px);
+        }
+      }
+    }
+
+    .content-right {
+      .circle-right:first-child {
+        @include size(215px, 215px);
+        &::after {
+          @include borderCircle(241px, 241px);
+        }
+      }
+
+      .circle-right:last-child {
+        @include size(185px, 185px);
+        &::after {
+          @include borderCircle(209px, 209px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 60px;
+
+    .content-left {
+      margin: 0 auto;
+      max-width: 100%;
+
+      &__title {
+        text-align: center;
+      }
+    }
+
+    .content-right {
+      &__list {
+        text-align: center;
+      }
+
+      &__desc {
+        text-align: center;
+      }
+
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column-reverse;
+
+      &__desc {
+        margin-top: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .content {
+    .content-left {
+      .circle-left:last-child {
+        left: 250px;
+      }
+    }
+
+    .content-right {
+      .circle-right:first-child {
+        left: 0;
+        bottom: 30px;
+      }
+
+      .circle-right:last-child {
+        bottom: -150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .content {
+    padding-top: 20px;
+
+    .content-left {
+      &__title {
+        text-align: center;
+        font-size: 30px;
+      }
+
+      &__circle {
+        height: 500px;
+      }
+
+      .circle-left:first-child {
+        @include size(150px, 150px);
+        left: 10px;
+
+        &::after {
+          @include borderCircle(174px, 174px);
+        }
+      }
+
+      .circle-left:nth-child(2) {
+        @include size(146px, 146px);
+        left: 135px;
+        bottom: 35px;
+
+        &::after {
+          @include borderCircle(174px, 174px);
+        }
+      }
+
+      .circle-left:last-child {
+        @include size(170px, 170px);
+        left: 210px;
+        &::after {
+          @include borderCircle(194px, 194px);
+        }
+      }
+    }
+
+    .content-right {
+      &__list {
+        list-style-type: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .content {
+    .content-left {
+      .circle-left:last-child {
+        @include size(150px, 150px);
+        left: 177px;
+        &::after {
+          @include borderCircle(174px, 174px);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .content {
+    .content-left {
+      &__circle {
+        height: 400px;
+      }
+
+      .circle-left:first-child {
+        @include size(100px, 100px);
+        left: 0;
+        &::after {
+          @include borderCircle(120px, 120px);
+        }
+      }
+
+      .circle-left:nth-child(2) {
+        @include size(96px, 96px);
+        position: absolute;
+        bottom: 40px;
+        left: 90px;
+        &::after {
+          @include borderCircle(110px, 110px);
+        }
+      }
+
+      .circle-left:last-child {
+        @include size(140px, 140px);
+        left: 140px;
+        top: 35px;
+        &::after {
+          @include borderCircle(160px, 160px);
+        }
+      }
+    }
+
+    .content-right {
+      .circle-right:first-child {
+        @include size(118px, 118px);
+        top: 50px;
+
+        &::after {
+          @include borderCircle(144px, 144px);
+        }
+      }
+
+      .circle-right:last-child {
+        @include size(100px, 100px);
+        top: 100px;
+        &::after {
+          @include borderCircle(120px, 120px);
+        }
+      }
+    }
+  }
+}
+
+.hover {
+  transform: scale(2);
+}
