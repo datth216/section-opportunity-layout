@@ -1,2 +1,2 @@
 # Simple layout section opportunity
-Technology: HTML, CSS, SCSS, Responsive, Javascript 🎉
+Using: HTML, CSS, SCSS, Responsive, Javascript 🎉
